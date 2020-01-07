@@ -21,7 +21,7 @@
                 let input_key = _this.input;
                 if(input_key=="96a3be3cf272e017046d1b2674a52bd3"){
                     this.$message({
-                        message: '恭喜你，过了第二关',
+                        message: '恭喜你，过了第二关，后面会更难',
                         type: 'success'
                     });
                     his.$router.push({path:'/two'})

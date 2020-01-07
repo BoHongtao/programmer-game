@@ -34,7 +34,7 @@
             },
             getkey() {
                 this.$message('你以为我真的会告诉你吗？');
-                console.log("b4b147bc522828731f1a016bfa72c073")
+                console.log("恭喜你，秘钥是"+"b4b147bc522828731f1a016bfa72c073"+"我是故意放水的")
             },
         }
     }
