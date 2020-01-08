@@ -15,5 +15,10 @@ export default new VueRouter({
             path: '/second',
             component: resolve => void(require(['../components/Second.vue'], resolve))
         },
+        {
+            name: 'third',
+            path: '/third',
+            component: resolve => void(require(['../components/Third.vue'], resolve))
+        },
     ]
 })

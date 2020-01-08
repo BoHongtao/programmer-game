@@ -15,16 +15,20 @@
                 dialogVisible: false
             }
         },
+        mounted(){
+            window.addEventListener('keydown', this.onClick);
+            document.oncontextmenu = () => false;
+        },
         methods:{
             commit() {
                 var _this = this;
                 let input_key = _this.input;
-                if(input_key=="b4b147bc522828731f1a016bfa72c073"){
+                if(input_key=="d3d9446802a44259755d38e6d163e820"){
                     this.$message({
-                        message: '恭喜你，过了第一关，不过我觉得你是运气好而已',
+                        message: '恭喜你，过了第三关',
                         type: 'success'
                     });
-                    this.$router.push({path:'/second'})
+                    this.$router.push({path:'/fourth'})
                 }else{
                     this.$message({
                         message: '菜鸡，错了',
@@ -34,8 +38,14 @@
             },
             getkey() {
                 this.$message('你以为我真的会告诉你吗？');
-                console.log("恭喜你，秘钥是"+"b4b147bc522828731f1a016bfa72c073"+"我是故意放水的")
+                console.log("d3d9446802a44259755d38e6d163e820")
             },
+            onClick (val) {
+                if (val.keyCode === 123) {
+                    window.event.preventDefault();
+                    return false
+                }
+            }
         }
     }
 </script>
