@@ -24,7 +24,7 @@
                         message: '恭喜你，过了第二关，后面会更难',
                         type: 'success'
                     });
-                    his.$router.push({path:'/third'})
+                    this.$router.push({path:'/third'})
                 }else{
                     this.$message({
                         message: '菜鸡，错了',
