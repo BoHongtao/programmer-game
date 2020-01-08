@@ -1,23 +1,47 @@
 ### 程序员闯关游戏
-#### laraveL + vue 制作
-### USage
-`git clone https://github.com/BoHongtao/programmer-game.git`
 
-`cd <project-name>`
+#### Laravel 5.7 Project with Vue2 and [Element](https://github.com/ElemeFE/element) 制作
 
-`composer install`
+## Usage
+```
+git clone https://github.com/BoHongtao/programmer-game.git
+```
+```
+cd <project-name>
+```
+```
+composer install
+```
+```
+cp .env.example .env
+```
+```
+php artisan key:generate
+```
+```
+php artisan serve (if not using laravel valet)
+```
+```
+yarn OR npm install
+```
+```
+yarn watch OR npm run watch
+```
 
-`cp .env.example .env`
+Visit `http://localhost:8000`, It works!
 
-`php artisan key:generate`
+```
+If using laravel valet, visit http://<project-name>.test
+```
 
-`php artisan serve`
+Now you're ready to start coding!
 
-`npm install`
+## More
 
-`npm run watch`
+The articles can help you to deploy it by yourself:
 
-Now you're ready to start running!
-
+- [Try Laravel 5.3 + Vue2 with Element](http://codesky.me/archives/try-laravel5-vue2-element-en.wind)
+- [Laravel 5.3 + Vue2 + Element试水](http://codesky.me/archives/try-laravel5-vue2-element-cn.wind)
+- [Element Docs](https://element.eleme.io/#/en-US)
 
 
