@@ -21,20 +21,27 @@
         },
         methods:{
             commit() {
-                var _this = this;
+                const _this = this;
                 let input_key = _this.input;
-                if(input_key=="d3d9446802a44259755d38e6d163e820"){
-                    this.$message({
-                        message: '恭喜你，过了第三关',
-                        type: 'success'
-                    });
-                    this.$router.push({path:'/Fourth'})
-                }else{
-                    this.$message({
-                        message: '菜鸡，错了',
-                        type: 'warning'
-                    });
-                }
+                axios.post('/api/index/one', {
+                    step: '3',
+                    key: input_key
+                }).then(function (response) {
+                    if(response.data.code==200){
+                        _this.$message({
+                            message: '恭喜你，过了第三关，难度又增加了，现在开始第四关',
+                            type: 'success'
+                        });
+                        _this.$router.push({path:'/fourth'})
+                        return false;
+                    }else{
+                        _this.$message({
+                            message: '菜鸡，错了',
+                            type: 'warning'
+                        });
+                        return false;
+                    }
+                });
             },
             getkey() {
                 this.$message('你以为我真的会告诉你吗？');

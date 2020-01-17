@@ -1,11 +1,16 @@
 <template>
-    <el-main>
-        <el-row direction="horizontal">
-            <el-input v-model="input" placeholder="请输入秘钥" :disabled="true"></el-input>
-            <el-button type="primary" v-on:click="commit" disabled>提交密钥</el-button>
-            <el-button type="success" v-on:click="getkey" disabled>获取密钥</el-button>
-        </el-row>
-    </el-main>
+    <el-container>
+        <el-aside width="260px">
+            <img src="/img/rs.png" style="margin-top: 100px">
+        </el-aside>
+        <el-main>
+            <el-row direction="horizontal">
+                <el-input v-model="input" placeholder="请输入秘钥"></el-input>
+                <el-button type="primary" v-on:click="commit">提交密钥</el-button>
+                <el-button type="success" v-on:click="getkey">获取密钥</el-button>
+            </el-row>
+        </el-main>
+    </el-container>
 </template>
 <script>
     export default {
@@ -20,15 +25,15 @@
                 const _this = this;
                 let input_key = _this.input;
                 axios.post('/api/index/one', {
-                    step: '2',
+                    step: '5',
                     key: input_key
                 }).then(function (response) {
                     if(response.data.code==200){
                         _this.$message({
-                            message: '恭喜你，过了第二关，不过这只是热身，现在开始第三关',
+                            message: '卧槽，这都过了，6666666',
                             type: 'success'
                         });
-                        _this.$router.push({path:'/third'})
+                        _this.$router.push({path:'/fifth'})
                         return false;
                     }else{
                         _this.$message({
@@ -40,9 +45,8 @@
                 });
             },
             getkey() {
-                this.$message('你以为我真的会告诉你吗？');
-                console.log("96a3be3cf272e017046d1b2674a52bd3")
-            },
+                this.$message('你以为二维码是摆设？');
+            }
         }
     }
 </script>

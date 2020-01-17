@@ -1,20 +1,20 @@
-webpackJsonp([0],{
+webpackJsonp([6],{
 
-/***/ 208:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_lib_selector_type_script_index_0_Third_vue__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_lib_selector_type_script_index_0_Third_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_lib_selector_type_script_index_0_Third_vue__);
-/* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_lib_selector_type_script_index_0_Third_vue__) if(["default","default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_lib_selector_type_script_index_0_Third_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a11a1ae8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Third_vue__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_script_index_0_Third_vue__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_script_index_0_Third_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_script_index_0_Third_vue__);
+/* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_script_index_0_Third_vue__) if(["default","default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_script_index_0_Third_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_7_3_vue_loader_lib_template_compiler_index_id_data_v_a11a1ae8_hasScoped_true_buble_transforms_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_template_index_0_Third_vue__ = __webpack_require__(218);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(227)
+  __webpack_require__(222)
 }
-var normalizeComponent = __webpack_require__(83)
+var normalizeComponent = __webpack_require__(82)
 /* script */
 
 
@@ -29,8 +29,8 @@ var __vue_scopeId__ = "data-v-a11a1ae8"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_lib_selector_type_script_index_0_Third_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a11a1ae8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Third_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_cacheDirectory_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_script_index_0_Third_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_7_3_vue_loader_lib_template_compiler_index_id_data_v_a11a1ae8_hasScoped_true_buble_transforms_node_modules_vue_loader_13_7_3_vue_loader_lib_selector_type_template_index_0_Third_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -40,7 +40,7 @@ Component.options.__file = "resources/js/components/Third.vue"
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -59,7 +59,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 211:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96,25 +96,18 @@ exports.default = {
         commit: function commit() {
             var _this = this;
             var input_key = _this.input;
-            axios.post('/api/index/one', {
-                step: '3',
-                key: input_key
-            }).then(function (response) {
-                if (response.data.code == 200) {
-                    _this.$message({
-                        message: '恭喜你，过了第三关，难度又增加了，现在开始第四关',
-                        type: 'success'
-                    });
-                    _this.$router.push({ path: '/fourth' });
-                    return false;
-                } else {
-                    _this.$message({
-                        message: '菜鸡，错了',
-                        type: 'warning'
-                    });
-                    return false;
-                }
-            });
+            if (input_key == "d3d9446802a44259755d38e6d163e820") {
+                this.$message({
+                    message: '恭喜你，过了第三关',
+                    type: 'success'
+                });
+                this.$router.push({ path: '/Fourth' });
+            } else {
+                this.$message({
+                    message: '菜鸡，错了',
+                    type: 'warning'
+                });
+            }
         },
         getkey: function getkey() {
             this.$message('你以为我真的会告诉你吗？');
@@ -131,7 +124,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 217:
+/***/ 214:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(53)();
@@ -146,7 +139,7 @@ exports.push([module.i, "\n.el-input[data-v-a11a1ae8]{\n    width: 300px;\n    m
 
 /***/ }),
 
-/***/ 222:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -197,29 +190,29 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-a11a1ae8", esExports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-a11a1ae8", esExports)
   }
 }
 
 /***/ }),
 
-/***/ 227:
+/***/ 222:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(217);
+var content = __webpack_require__(214);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(84)("1ed56a6b", content, false, {});
+var update = __webpack_require__(83)("1eab08ca", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a11a1ae8\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Third.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a11a1ae8\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Third.vue");
+   module.hot.accept("!!../../../node_modules/_css-loader@0.25.0@css-loader/index.js!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a11a1ae8\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Third.vue", function() {
+     var newContent = require("!!../../../node_modules/_css-loader@0.25.0@css-loader/index.js!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a11a1ae8\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Third.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

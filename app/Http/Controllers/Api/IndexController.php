@@ -13,14 +13,31 @@ class IndexController extends Controller
 {
     public function one()
     {
-        $post_data = request()->post('key');
-        $_ = "var_dump";
-        echo $_;
-        call_user_func($_,array('0'));
-        if($post_data==''){
-            return response()->json(['code' => 0, 'msg' => '数据不能为空']);
+        $key = request()->post('key');
+        $step = request()->post('step');
+        switch ($step){
+            case 1:
+                if($key=='b4b147bc522828731f1a016bfa72c073')
+                    return response()->json(['code' => 200]);
+                return response()->json(['code' => 0]);
+            case 2:
+                if($key=='96a3be3cf272e017046d1b2674a52bd3')
+                    return response()->json(['code' => 200]);
+                return response()->json(['code' => 0]);
+            case 3:
+                if($key=='d3d9446802a44259755d38e6d163e820')
+                    return response()->json(['code' => 200]);
+                return response()->json(['code' => 0]);
+            case 4:
+                if($key=='6512bd43d9caa6e02c990b0a82652dca')
+                    return response()->json(['code' => 200]);
+                return response()->json(['code' => 0]);
+            case 5:
+                if($key=='ccc231b88f25cbff362eb367d8fecae')
+                    return response()->json(['code' => 200]);
+                return response()->json(['code' => 0]);
+            default:
+                return response()->json(['code' => 0]);
         }
-        return json_encode(['code' => 0, 'msg' => 'success']);
     }
-
 }
