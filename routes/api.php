@@ -18,5 +18,5 @@ use Illuminate\Http\Request;
 //})->middleware('auth:api');
 
 Route::group(['namespace' => 'Api'], function(){
-    Route::post('index/one','IndexController@one');
+    Route::any('index/one','IndexController@one');
 });
