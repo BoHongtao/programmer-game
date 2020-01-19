@@ -23,7 +23,7 @@
             commit() {
                 const _this = this;
                 let input_key = _this.input;
-                axios.post('/api/index/one', {
+                axios.post('/index.php/api/index/one', {
                     step: '3',
                     key: input_key
                 }).then(function (response) {
