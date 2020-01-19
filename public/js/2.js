@@ -96,7 +96,7 @@ exports.default = {
         commit: function commit() {
             var _this = this;
             var input_key = _this.input;
-            axios.post('/api/index/one', {
+            axios.post('/index.php/api/index/one', {
                 step: '4',
                 key: input_key
             }).then(function (response) {
